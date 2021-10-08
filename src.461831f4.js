@@ -5,8 +5,8 @@ const e=e=>new Promise(o=>{setTimeout(()=>o(e),e)}),o=e=>console.log(`Resolved a
 },{}],"h0U2":[function(require,module,exports) {
 const e=[{name:"Mango",active:!0},{name:"Poly",active:!1},{name:"Ajax",active:!0},{name:"Lux",active:!1}],a=(e,a)=>new Promise(n=>n(e.map(e=>e.name===a?{...e,active:!e.active}:e))),n=e=>console.table(e);a(e,"Mango").then(n),a(e,"Lux").then(n);
 },{}],"ZW5E":[function(require,module,exports) {
-const t=(t,n)=>Math.floor(Math.random()*(n-t+1)+t),n=({id:n})=>new Promise((a,o)=>{const e=t(200,500);setTimeout(()=>{Math.random()>.3&&a({id:n,time:e}),o(n)},e)}),a=({id:t,time:n})=>{console.log(`Transaction ${t} processed in ${n}ms`)},o=t=>{console.warn(`Error processing transaction ${t}. Please try again later.`)};n({id:70,amount:150}).then(a).catch(o),n({id:71,amount:230}).then(a).catch(o),n({id:72,amount:75}).then(a).catch(o),n({id:73,amount:100}).then(a).catch(o);
+const t=(t,n)=>Math.floor(Math.random()*(n-t+1)+t),n=n=>new Promise((a,o)=>{const e=t(200,500);setTimeout(()=>{Math.random()>.3&&a({id:n.id,time:e}),o(n.id)},e)}),a=({id:t,time:n})=>{console.log(`Transaction ${t} processed in ${n}ms`)},o=t=>{console.warn(`Error processing transaction ${t}. Please try again later.`)};n({id:70,amount:150}).then(a).catch(o),n({id:71,amount:230}).then(a).catch(o),n({id:72,amount:75}).then(a).catch(o),n({id:73,amount:100}).then(a).catch(o);
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/promise-task1"),require("./js/promise-task2"),require("./js/promise-task3");
 },{"./sass/main.scss":"clu1","./js/promise-task1":"jXo6","./js/promise-task2":"h0U2","./js/promise-task3":"ZW5E"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11-promisification/src.3f578f76.js.map
+//# sourceMappingURL=/goit-js-hw-11-promisification/src.461831f4.js.map
